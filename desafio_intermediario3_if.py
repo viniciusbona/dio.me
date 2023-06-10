@@ -34,34 +34,26 @@ conjunto_animais = {
 
 import sys
 
-#a = input()
-#b = input()
-#c = input()
-
-a = sys.stdin.readline().strip()
-b = sys.stdin.readline().strip()
-c = sys.stdin.readline().strip()
+a = input()
+b = input()
+c = input()
 
 
 if a == 'vertebrado':
-    if b == 'ave':
-        if c == 'carnivoro':
+    if b == 'ave' and 'carnivoro':
             print('aguia')
-        elif c == 'onivoro':
+    elif b == 'ave' and c == 'onivoro':
             print('pomba')
-    elif b == 'mamifero':
-        if c == 'onivoro':
+    elif b == 'mamifero' and c == 'onivoro':
             print('homen')
-        elif c == 'herbivoro':
+    elif b == 'mamifero' and c == 'herbivoro':
             print('vaca')
 elif a == 'invertebrado':
-    if b == 'inseto':
-        if c == 'hematofago':
+    if b == 'inseto' and c == 'hematofago':
             print('pulga')
-        elif c == 'herbivoro':
+    elif b == 'inseto' and c == 'herbivoro':
             print('lagarta')
-    elif b == 'anelideo':
-        if c == 'hematofago':
+    elif b == 'anelideo' and c == 'hematofago':
             print('sanguessuga')
-        elif c == 'onivoro':
+    elif b == 'anelideo' and c == 'onivoro':
             print('minhoca')
