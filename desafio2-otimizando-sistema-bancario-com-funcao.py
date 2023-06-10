@@ -158,7 +158,7 @@ def criar_usuario(lista_usuarios):
         usuario['cpf'] = cpf
         usuario['endereco'] = input("informe o endereço: ")
         lista_usuarios.append(usuario)
-        print(f"usuario \n {usuario} \n\n crido com sucesso\n")
+        print(f"usuario criado com sucesso: \n {usuario} \n")
 
         return lista_usuarios
 
@@ -166,7 +166,7 @@ def criar_conta_corrente(lista_contas, lista_usuarios, AGENCIA):
     conta = {}
     cpf = input("informe cpf do usuario")
     nome = filtrar_usuario(cpf, lista_usuarios)
-    if nome == 'None':
+    if nome == None:
       print(f"Falha !! usuario com cpf {cpf}, não encontrado")
       return lista_contas
     else:
@@ -174,8 +174,9 @@ def criar_conta_corrente(lista_contas, lista_usuarios, AGENCIA):
       conta['numero'] = len(lista_contas) + 1
       conta['usuario'] = nome
       lista_contas.append(conta)
+      print(f'Conta corrente crida com sucesso: \n {conta} \n')
       return lista_contas
-    print(f'Conta corrente crida com sucesso: \n {conta} \n')
+    
     
 def main():
      saldo = 0
@@ -186,7 +187,7 @@ def main():
      AGENCIA = "0001"
      lista_contas = []
      lista_usuarios = []
-    while True:
+     while True:
 
         opcao = input(menu)
         #depositar
